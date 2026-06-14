@@ -1,0 +1,233 @@
+/* =========================================================
+   ESTÉTICA CONCRETISTA - AGRINHO 2026
+   Paleta: Tons industriais e geométricos de alto contraste
+========================================================= */
+
+:root {
+    --cor-fundo: #F4F4F0;
+    /* Cinza off-white (papel) */
+    --cor-texto: #111111;
+    /* Quase preto absoluto */
+    --cor-verde: #008C45;
+    /* Verde sólido e tecnológico */
+    --cor-vermelha: #D92525;
+    /* Vermelho para contraste geométrico */
+    --borda-grossa: 4px solid var(--cor-texto);
+    --borda-fina: 1px solid var(--cor-texto);
+}
+
+/* =========================================================
+   RESET E CONFIGURAÇÕES GERAIS
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* O Container mantém o design alinhado em um bloco central */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tipografia Estrutural */
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+/* =========================================================
+   CABEÇALHO E NAVEGAÇÃO
+========================================================= */
+header {
+    background-color: #FFFFFF;
+    border-bottom: var(--borda-grossa);
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    background-color: var(--cor-verde);
+    color: #FFFFFF;
+    padding: 5px 15px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    transition: all 0.2s ease;
+}
+
+/* Efeito Concretista no Hover do Menu (bloco de cor sólida) */
+.menu a:hover {
+    background-color: var(--cor-texto);
+    color: #FFFFFF;
+}
+
+/* =========================================================
+   SEÇÃO HERO (DESTAQUE INICIAL)
+========================================================= */
+.hero {
+    /* Fundo com divisão geométrica diagonal típica do concretismo */
+    background: linear-gradient(135deg, var(--cor-fundo) 50%, var(--cor-verde) 50%);
+    padding: 120px 0;
+    border-bottom: var(--borda-grossa);
+}
+
+.hero-content {
+    background-color: #FFFFFF;
+    border: var(--borda-grossa);
+    padding: 50px;
+    max-width: 650px;
+    box-shadow: 15px 15px 0px var(--cor-texto);
+    /* Sombra sólida/dura */
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+#btn-saiba-mais {
+    background-color: var(--cor-vermelha);
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn-saiba-mais:hover {
+    background-color: var(--cor-texto);
+}
+
+/* =========================================================
+   SEÇÕES GERAIS E CONTEÚDO
+========================================================= */
+section {
+    padding: 100px 0;
+    border-bottom: var(--borda-grossa);
+}
+
+.secao-clara {
+    background-color: var(--cor-fundo);
+}
+
+/* Inversão de cores na seção escura para criar contraste em blocos */
+.secao-escura {
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    /* Linha lateral geométrica para destacar o título */
+    border-left: 15px solid var(--cor-verde);
+    padding-left: 20px;
+}
+
+.secao-escura h2 {
+    border-left-color: var(--cor-vermelha);
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+/* =========================================================
+   GRID E CARDS DE PRÁTICAS SUSTENTÁVEIS
+========================================================= */
+.grid-praticas {
+    display: grid;
+    /* Grid modular que se adapta ao tamanho da tela */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    border: var(--borda-fina);
+    border-color: var(--cor-fundo);
+    padding: 40px 30px;
+    background-color: transparent;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.card:hover {
+    background-color: #222222;
+    transform: translateY(-5px);
+    /* Efeito sutil de bloco subindo */
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--cor-verde);
+}
+
+.card p {
+    font-size: 1rem;
+    color: #CCCCCC;
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   RODAPÉ (FOOTER)
+========================================================= */
+footer {
+    background-color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center;
+    border-top: var(--borda-grossa);
+}
+
+footer p {
+    margin: 0 auto 10px auto;
+    font-size: 0.95rem;
+}
+
+footer strong {
+    color: var(--cor-verde);
+}
